@@ -2,6 +2,8 @@ source 'https://ruby.taobao.org'
 
 gem 'rails', '4.1.2'
 gem 'devise'
+gem 'rolify'
+gem 'cancancan'
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'active_admin_editor'
 
