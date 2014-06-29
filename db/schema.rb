@@ -56,7 +56,8 @@ ActiveRecord::Schema.define(version: 20140629102150) do
 
   create_table "user_resources", force: true do |t|
     t.integer  "user_id"
-    t.string   "filename"
+    t.string   "file_name"
+    t.string   "tag"
     t.string   "media"
     t.datetime "created_at"
     t.datetime "updated_at"
