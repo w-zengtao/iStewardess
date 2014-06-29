@@ -12,7 +12,7 @@ gem 'qiniu-rs'
 gem 'carrierwave'
 gem 'carrierwave-qiniu'
 gem 'acts-as-taggable-on'
-gem 'will_paginate', '~> 3.0'
+# gem 'will_paginate', '~> 3.0'
 
 group :development, :test do
   gem 'sqlite3'
