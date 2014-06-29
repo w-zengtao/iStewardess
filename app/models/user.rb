@@ -8,4 +8,7 @@ class User < ActiveRecord::Base
   has_many  :user_resources
   
   mount_uploader :avatar,  MediaUploader
+  
+  accepts_nested_attributes_for :user_profile
+  accepts_nested_attributes_for :user_resources
 end
