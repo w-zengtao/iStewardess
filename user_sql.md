@@ -9,7 +9,7 @@ table user
 
 id:
 email: 
-
+name:
 ```
 
 * user_profile has_many user_resource

@@ -7,6 +7,13 @@ gem 'cancancan'
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'active_admin_editor'
 
+gem 'settingslogic' #yml配置
+gem 'qiniu-rs'
+gem 'carrierwave'
+gem 'carrierwave-qiniu'
+gem 'acts-as-taggable-on'
+gem 'will_paginate', '~> 3.0'
+
 group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails'
