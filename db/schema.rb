@@ -59,6 +59,7 @@ ActiveRecord::Schema.define(version: 20140629102150) do
     t.string   "file_name"
     t.string   "tag"
     t.string   "media"
+    t.string   "type"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

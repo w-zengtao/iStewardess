@@ -6,6 +6,15 @@ ActiveAdmin.register User do
     :id,
     :email,
     :birthday
+  ],
+  
+  :user_resources_attributes => [
+    :id,
+    :file_name,
+    :media,
+    :tag,
+    :type,
+    :_destroy => true
   ]
   
   index do
@@ -28,6 +37,15 @@ ActiveAdmin.register User do
     f.inputs "User Profile", :for => [:user_profile, f.object.user_profile || UserProfile.new ] do |profile|
       profile.input :email
       profile.input :birthday
+    end
+    
+    f.inputs "User Resource" do
+      f.has_many :user_resources, :allow_destroy => true do |item|
+        item.input   :media
+        item.input   :file_name
+        item.input   :tag
+        item.input   :type, as: :select, collection: [['图片', '0'],['视频', '1'],['音频', '2']]
+      end
     end
     
     f.actions
