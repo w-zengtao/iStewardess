@@ -3,7 +3,7 @@ class CreateUserProfiles < ActiveRecord::Migration
     create_table :user_profiles do |t|
       
       t.integer :user_id
-      t.integer :email
+      t.string :email
       t.date    :birthday
       
       t.timestamps
