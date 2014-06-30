@@ -35,6 +35,12 @@ ActiveAdmin.register User do
     end
     
     f.inputs "User Profile", :for => [:user_profile, f.object.user_profile || UserProfile.new ] do |profile|
+      profile.input :qq
+      profile.input :wechat
+      profile.input :tel
+      profile.input :is_student
+      profile.input :school
+      profile.input :company
       profile.input :email
       profile.input :birthday
     end
@@ -51,3 +57,10 @@ ActiveAdmin.register User do
     f.actions
   end
 end
+# add_column :user_profiles, :qq,           :string
+# add_column :user_profiles, :wechat,       :string
+# add_column :user_profiles, :tel,          :string
+# add_column :user_profiles, :add,          :string
+# add_column :user_profiles, :is_student,   :boolean
+# add_column :user_profiles, :school,       :string
+# add_column :user_profiles, :company,      :string
