@@ -6,7 +6,7 @@ class CreateUserResources < ActiveRecord::Migration
       t.string    :file_name
       t.string    :tag
       t.string    :media
-      t.string    :type      
+      t.integer   :catagory      
       t.timestamps
     end
   end

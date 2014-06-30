@@ -13,7 +13,7 @@ ActiveAdmin.register User do
     :file_name,
     :media,
     :tag,
-    :type,
+    :catagory,
     :_destroy => true
   ]
   
@@ -43,8 +43,8 @@ ActiveAdmin.register User do
       f.has_many :user_resources, :allow_destroy => true do |item|
         item.input   :media
         item.input   :file_name
-        item.input   :tag
-        item.input   :type, as: :select, collection: [['图片', '0'],['视频', '1'],['音频', '2']]
+        item.input   :tag # 这里的tag应该是一个多选的集合 暂时都使用empty处理
+        item.input   :catagory, as: :select, collection: [['未分类','0'],['图片', '1'],['视频', '2'],['音频', '3']]
       end
     end
     
