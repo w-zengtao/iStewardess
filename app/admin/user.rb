@@ -39,7 +39,7 @@ ActiveAdmin.register User do
       profile.input :birthday
     end
     
-    f.inputs "User Resource" do
+    f.inputs do
       f.has_many :user_resources, :allow_destroy => true do |item|
         item.input   :media
         item.input   :file_name
