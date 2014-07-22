@@ -5,7 +5,9 @@ class User < ActiveRecord::Base
   #temperament(气质) lolita(萝莉) yujie(御姐) pure(清纯) material(拜金) cute(可爱) partysu(小清新)
   
   acts_as_taggable
+  acts_as_taggable_on :skills, :interests
   acts_as_taggable_on :self_type, :care_type
+  
   scope :by_update_date, order("updated_at DESC")
   
   rolify :before_add => :before_add_method
@@ -13,6 +15,7 @@ class User < ActiveRecord::Base
   before_save :set_default_rolify
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
+  
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
          
