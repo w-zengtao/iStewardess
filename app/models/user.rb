@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
   acts_as_taggable_on :skills, :interests
   acts_as_taggable_on :self_type, :care_type
   
-  scope :by_update_date, order("updated_at DESC")
+  scope :by_join_date, order("created_at DESC")
   
   rolify :before_add => :before_add_method
   
