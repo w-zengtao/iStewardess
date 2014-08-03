@@ -4,17 +4,22 @@ class User < ActiveRecord::Base
   
   #temperament(气质) lolita(萝莉) yujie(御姐) pure(清纯) material(拜金) cute(可爱) partysu(小清新)
   
+  # 下面的打算都改造成动态标签
   acts_as_taggable
-  acts_as_taggable_on :self_type, :care_type
-  scope :by_update_date, order("updated_at DESC")
+  # acts_as_taggable_on :skills, :interests
+  # acts_as_taggable_on :self_type, :care_type
+  
+  scope :by_join_date, order("created_at DESC")
   
   rolify :before_add => :before_add_method
   
   before_save :set_default_rolify
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
+  
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+         # :confirmable, :lockable
          
   has_one   :user_profile
   has_many  :user_resources
