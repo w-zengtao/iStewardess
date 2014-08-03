@@ -1,3 +1,0 @@
-1:	前端页面
-2:	User rolify的配置
-3:	Rolify Scope的配置
